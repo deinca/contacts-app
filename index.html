@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/styles/style.css" rel="stylesheet">
+  <title>Vue.js Contacts</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+  <div id="vue-app">
+    <h1>{{ greet('Morning') }}</h1>
+    <p>Job: {{ job }}</p>
+    <p> Age: {{ age }}</p>
+
+    <button v-on:click=remove(1) >remove a year</button>
+    <button v-on:click=add(1) >add a year</button>
+
+    <button v-on:dblclick=remove(10) >remove 10 year</button>
+    <button v-on:dblclick=add(10) >add 10 year</button>
+
+    <p><a v-bind:href="website" >More information</a></p>
+    <p v-html="websiteHtmlTag"></p>
+  </div>
+  <script src="/functions/app.js"></script>
+</body>
+</html>
